@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 var links = [
   {
     name: "Home",
-    path: "/index",
+    path: "/",
   },
   {
     name: "Sign In",
@@ -29,7 +29,7 @@ var links = [
 ];
 
 //Express app
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", { title: "Home", menu: links });
 });
 app.get("/contact-us", (req, res) => {
